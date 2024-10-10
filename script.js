@@ -81,18 +81,61 @@ console.log("Experiment");
 
 // Bouncing ball problem
 
-function bouncingBall(h, bounce, window) {
-  if (h > 0 && bounce > 0 && bounce < 1 && window < h) {
-    let count = 1;
-    h = h * bounce;
-    while (h > window) {
-      count += 2;
-      h = h * bounce;
-    }
-    return count;
-  } else {
-    return -1;
+// function bouncingBall(h, bounce, window) {
+//   if (h > 0 && bounce > 0 && bounce < 1 && window < h) {
+//     let count = 1;
+//     h = h * bounce;
+//     while (h > window) {
+//       count += 2;
+//       h = h * bounce;
+//     }
+//     return count;
+//   } else {
+//     return -1;
+//   }
+// }
+
+// console.log(bouncingBall(30, 0.66, 1.5));
+
+// Build a pile of Cubes
+
+// function findNb(m) {
+//   // your code
+
+//   let output = 1;
+//   let check = 0;
+
+//   while (check <= m) {
+//     check += output ** 3;
+
+//     if (check == m) {
+//       return output;
+//     }
+
+//     output++;
+//   }
+
+//   return -1;
+// }
+
+// console.log(findNb(4183059834009));
+
+// Count the divisors of a number
+
+function getDivisorsCnt(n) {
+  // todo
+  let count = 0;
+  let squareRootN = Math.sqrt(n);
+
+  if (n % squareRootN == 0) {
+    count++;
   }
+  for (let i = 0; i < squareRootN; i++) {
+    if (n % i === 0) {
+      count += 2;
+    }
+  }
+  return count;
 }
 
-console.log(bouncingBall(30, 0.66, 1.5));
+console.log(getDivisorsCnt(54));
