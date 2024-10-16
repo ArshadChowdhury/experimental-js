@@ -122,20 +122,31 @@ console.log("Experiment");
 
 // Count the divisors of a number
 
-function getDivisorsCnt(n) {
-  // todo
-  let count = 0;
-  let squareRootN = Math.sqrt(n);
+// function getDivisorsCnt(n) {
+//   // todo
+//   let count = 0;
+//   let squareRootN = Math.sqrt(n);
 
-  if (n % squareRootN == 0) {
-    count++;
-  }
-  for (let i = 0; i < squareRootN; i++) {
-    if (n % i === 0) {
-      count += 2;
-    }
-  }
-  return count;
+//   if (n % squareRootN == 0) {
+//     count++;
+//   }
+//   for (let i = 0; i < squareRootN; i++) {
+//     if (n % i === 0) {
+//       count += 2;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(getDivisorsCnt(54));
+
+// Find unique value from an array
+
+function findUniq(arr) {
+  arr.sort((a, b) => a - b);
+  let answer = arr[0] == arr[1] ? arr.pop() : arr[0];
+
+  return answer;
 }
 
-console.log(getDivisorsCnt(54));
+console.log(findUniq([1, 1, 1, 2, 1, 1]));
