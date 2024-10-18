@@ -142,11 +142,34 @@ console.log("Experiment");
 
 // Find unique value from an array
 
-function findUniq(arr) {
-  arr.sort((a, b) => a - b);
-  let answer = arr[0] == arr[1] ? arr.pop() : arr[0];
+// function findUniq(arr) {
+//   arr.sort((a, b) => a - b);
+//   let answer = arr[0] == arr[1] ? arr.pop() : arr[0];
 
-  return answer;
+//   return answer;
+// }
+
+// console.log(findUniq([1, 1, 1, 2, 1, 1]));
+
+// Money money money problem
+
+function calculateYears(principal, interest, tax, desired) {
+  let years = 0;
+
+  while (principal < desired) {
+    // Calculate the interest for the year
+    let yearlyInterest = principal * interest; // No need for / 100 because interest is already in decimal
+
+    // Calculate the tax on the interest
+    let interestAfterTax = yearlyInterest * (1 - tax); // No need for / 100 because tax is already in decimal
+
+    // Add the after-tax interest to the principal
+    principal += interestAfterTax;
+
+    years++;
+  }
+
+  return years;
 }
 
-console.log(findUniq([1, 1, 1, 2, 1, 1]));
+console.log(calculateYears(1000, 0.05, 0.18, 1100));
