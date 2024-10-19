@@ -153,23 +153,29 @@ console.log("Experiment");
 
 // Money money money problem
 
-function calculateYears(principal, interest, tax, desired) {
-  let years = 0;
+// function calculateYears(principal, interest, tax, desired) {
+//   let years = 0;
 
-  while (principal < desired) {
-    // Calculate the interest for the year
-    let yearlyInterest = principal * interest; // No need for / 100 because interest is already in decimal
+//   while (principal < desired) {
+//     // Calculate the interest for the year
+//     let yearlyInterest = principal * interest; // No need for / 100 because interest is already in decimal
 
-    // Calculate the tax on the interest
-    let interestAfterTax = yearlyInterest * (1 - tax); // No need for / 100 because tax is already in decimal
+//     // Calculate the tax on the interest
+//     let interestAfterTax = yearlyInterest * (1 - tax); // No need for / 100 because tax is already in decimal
 
-    // Add the after-tax interest to the principal
-    principal += interestAfterTax;
+//     // Add the after-tax interest to the principal
+//     principal += interestAfterTax;
 
-    years++;
-  }
+//     years++;
+//   }
 
-  return years;
-}
+//   return years;
+// }
 
-console.log(calculateYears(1000, 0.05, 0.18, 1100));
+// console.log(calculateYears(1000, 0.05, 0.18, 1100));
+
+// Formatting decimal places #0
+
+const twoDecimalPlaces = (n) => Number(n.toFixed(2));
+
+console.log(twoDecimalPlaces(4.659725356));
