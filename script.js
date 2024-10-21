@@ -176,6 +176,6 @@ console.log("Experiment");
 
 // Formatting decimal places #0
 
-const twoDecimalPlaces = (n) => Number(n.toFixed(2));
+// const twoDecimalPlaces = (n) => Number(n.toFixed(2));
 
-console.log(twoDecimalPlaces(4.659725356));
+// console.log(twoDecimalPlaces(4.659725356));
