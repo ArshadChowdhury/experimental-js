@@ -182,19 +182,35 @@ console.log("Experiment");
 
 // Sorted? yes? no? how? problem
 
-function isSortedAndHow(array) {
-  // Create copies of the array and sort them
-  let ascending = [...array].sort((a, b) => a - b);
-  let descending = [...array].sort((a, b) => b - a);
+// function isSortedAndHow(array) {
+//   // Create copies of the array and sort them
+//   let ascending = [...array].sort((a, b) => a - b);
+//   let descending = [...array].sort((a, b) => b - a);
 
-  // Compare the original array with the sorted arrays
-  if (array.every((val, index) => val === ascending[index])) {
-    return "yes, ascending";
-  } else if (array.every((val, index) => val === descending[index])) {
-    return "yes, descending";
-  } else {
-    return "no";
-  }
+//   // Compare the original array with the sorted arrays
+//   if (array.every((val, index) => val === ascending[index])) {
+//     return "yes, ascending";
+//   } else if (array.every((val, index) => val === descending[index])) {
+//     return "yes, descending";
+//   } else {
+//     return "no";
+//   }
+// }
+
+// console.log(isSortedAndHow([15, 7, 3, -8]));
+
+// Duck Duck Goose problem
+
+// function duckDuckGoose(players, goose) {
+//   let playerPosition = goose % players.length;
+
+//   return playerPosition == 0
+//     ? players[players.length - 1].name
+//     : players[playerPosition - 1].name;
+// }
+
+// Sort array by string length
+
+function sortByLength(array) {
+  return array.sort((a, b) => a.length - b.length);
 }
-
-console.log(isSortedAndHow([15, 7, 3, -8]));
