@@ -214,3 +214,13 @@ console.log("Experiment");
 function sortByLength(array) {
   return array.sort((a, b) => a.length - b.length);
 }
+
+
+// Bumps in the Road
+
+const bump = (x) => {
+  x = x.split("n");
+  return x.length > 16 ? "Car Dead" : "Woohoo!";
+};
+
+console.log(bump("__nn_nnnn__n_n___n____nn__nnnnn"));
