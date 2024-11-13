@@ -211,16 +211,64 @@ console.log("Experiment");
 
 // Sort array by string length
 
-function sortByLength(array) {
-  return array.sort((a, b) => a.length - b.length);
-}
+// function sortByLength(array) {
+//   return array.sort((a, b) => a.length - b.length);
+// }
 
+// // Bumps in the Road
 
-// Bumps in the Road
+// const bump = (x) => {
+//   x = x.split("n");
+//   return x.length > 16 ? "Car Dead" : "Woohoo!";
+// };
 
-const bump = (x) => {
-  x = x.split("n");
-  return x.length > 16 ? "Car Dead" : "Woohoo!";
+// console.log(bump("__nn_nnnn__n_n___n____nn__nnnnn"));
+
+// Getting word from an array
+
+// function reconstructText(array) {
+//   let text = "";
+
+//   for (let i = 0; i < array.length; i++) {
+//     let position = array[i][0];
+//     let char = array[i][1];
+
+//     if (position > text.length) {
+//       text += char;
+//     } else {
+//       text = text.slice(0, position + 1) + char + text.slice(position);
+//     }
+//   }
+
+//   return text;
+// }
+
+// console.log(
+//   reconstructText([
+//     [1, "e"],
+//     [1, "l"],
+//     [2, "h"],
+//   ])
+// );
+
+// Linkedin Example Meme
+
+// you can read this code, you could |
+// probably use a free cup of coffee.
+
+var your_drink = "Cocktail";
+
+var reverse = function (s) {
+  return s.split("").reverse().join("");
 };
 
-console.log(bump("__nn_nnnn__n_n___n____nn__nnnnn"));
+var barista = {
+  str1: "ion",
+  str2: reverse("rcne"),
+  std: "ypt",
+  request: function (preference) {
+    return preference + "Secret word:" + this.str2 + this.str3 + this.str1;
+  },
+};
+
+console.log(barista.request(your_drink));
